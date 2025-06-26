@@ -1,0 +1,38 @@
+.equipe-section {
+  padding: 80px 5vw;
+  background-color: #f9fafb;
+  color: #1a202c;
+}
+
+.team-card {
+  text-align: center;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+.team-avatar {
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.social-icons {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  font-size: 1.25rem;
+  color: #3182ce;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #63b3ed;
+}

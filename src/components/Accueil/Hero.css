@@ -1,0 +1,125 @@
+.hero-section {
+  display: flex;
+  height: 90vh;
+  max-height: 700px;
+  padding: 0 5vw;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0d1a26;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  z-index: 2;
+  animation: fadeInSlideLeft 1s ease forwards;
+  color: white;
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  opacity: 0.85;
+  font-family: 'Georgia', serif;
+  color: white;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  font-weight: 500;
+  color: white;
+}
+
+.btn-hero {
+  border-radius: 30px;
+  padding: 12px 48px;
+  font-weight: 700;
+  box-shadow: 0 6px 15px rgba(64, 169, 255, 0.7);
+  transition: all 0.4s ease;
+  background-color: #1e40af;
+  border-color: #1e40af;
+}
+
+.btn-hero:hover {
+  background-color: #3b82f6;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.9);
+  transform: scale(1.05);
+  color: white;
+}
+
+.hero-image {
+  flex: 1;
+  height: 80vh;
+  max-height: 600px;
+  background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1471&q=80');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+  filter: brightness(0.85);
+  animation: fadeInSlideRight 1s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeInSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 5vw;
+  }
+  .hero-content, .hero-image {
+    max-width: 100%;
+    flex: none;
+    height: 300px;
+    margin-bottom: 30px;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+  .hero-description {
+    font-size: 1rem;
+  }
+}

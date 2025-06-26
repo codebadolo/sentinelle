@@ -1,0 +1,65 @@
+.navbar {
+  position: fixed;
+  width: 95%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
+  height: 64px;
+}
+
+.navbar-scrolled {
+  background-color: #001529;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  color: white;
+  font-weight: 700;
+  font-size: 1.85rem;
+  margin-right: 48px;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  outline: none;
+}
+
+.logo:hover,
+.logo:focus {
+  color: #40a9ff;
+  transform: scale(1.1);
+}
+
+.menu {
+  flex: 1;
+  background: transparent;
+  border-bottom: none;
+}
+
+.menu .ant-menu-item:hover,
+.menu .ant-menu-item-selected {
+  color: #40a9ff;
+  border-bottom: 2px solid #40a9ff;
+  transition: all 0.3s ease;
+}
+
+.btn-join {
+  border-radius: 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-color: #40a9ff;
+  color: #40a9ff;
+  box-shadow: none;
+}
+
+.btn-join:hover,
+.btn-join:focus {
+  background-color: #40a9ff;
+  color: white;
+  border-color: #40a9ff;
+  box-shadow: 0 4px 12px rgba(64, 169, 255, 0.6);
+  transform: translateY(-2px);
+}

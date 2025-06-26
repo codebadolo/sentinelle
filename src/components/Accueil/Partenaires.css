@@ -1,0 +1,32 @@
+.partenaires-section {
+  padding: 80px 5vw;
+  background-color: white;
+  color: #1a202c;
+}
+
+.partenaires-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 48px;
+  align-items: center;
+}
+
+.partner-logo-link {
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 140px;
+  filter: grayscale(40%);
+}
+
+.partner-logo-link:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  filter: grayscale(0%);
+}
+
+.partner-logo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

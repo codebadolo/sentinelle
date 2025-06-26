@@ -1,0 +1,109 @@
+.site-footer {
+  background-color: #001529;
+  color: #ffffff;
+  padding: 64px 5vw 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 16px;
+  color: #40a9ff;
+  user-select: none;
+}
+
+.footer-slogan {
+  font-size: 1rem;
+  color: #b0c4de;
+  max-width: 280px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #b0c4de;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #40a9ff;
+  text-decoration: underline;
+}
+
+.footer-contact text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #b0c4de;
+  font-size: 0.95rem;
+}
+
+.footer-contact svg {
+  font-size: 1.2rem;
+  color: #40a9ff;
+}
+
+.footer-social {
+  margin: 40px 0 24px;
+  font-size: 1.8rem;
+  color: #b0c4de;
+  transition: color 0.3s ease;
+}
+
+.footer-social a {
+  color: #b0c4de;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #40a9ff;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  border-top: 1px solid #163a5f;
+  padding-top: 16px;
+  font-size: 0.85rem;
+  color: #7a8ca1;
+}
+
+.footer-legal-links a {
+  color: #7a8ca1;
+  margin-left: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-legal-links a:hover {
+  color: #40a9ff;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-contact text {
+    font-size: 0.9rem;
+  }
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .footer-legal-links a {
+    margin-left: 0;
+    margin-right: 16px;
+  }
+}

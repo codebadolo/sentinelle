@@ -1,32 +1,28 @@
-// src/App.js
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { useContext } from 'react';
+import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
-// Pages publiques
-import Accueil from './pages/Accueil';
-import ContactPublic from './pages/ContactPublic';
-
-// Layout admin avec sidebar et topbar togglables
+import { AuthContext, AuthProvider } from './components/context/AuthContext';
+import LoginForm from './components/LoginForm';
 import DashboardLayout from './pages/admin/DashboardLayout';
 
-// Composants globaux
+const AdminRoute = () => {
+  const { token } = useContext(AuthContext);
+  return token ? <DashboardLayout /> : <LoginForm />;
+};
 
 function App() {
   return (
-    <Router>
-      {/* Barre de navigation publique */}
-   
-      <Routes>
-        {/* Routes publiques */}
-        <Route path="/" element={<Accueil />} />
-        <Route path="/contact" element={<ContactPublic />} />
+    <AuthProvider>
+      <Router>
+        <Routes>
+          {/* Route unique /admin qui affiche login ou dashboard selon auth */}
+          <Route path="/admin" element={<AdminRoute />} />
 
-        {/* Routes admin */}
-        <Route path="/admin/*" element={<DashboardLayout />} />
-      </Routes>
-
-      {/* Pied de page global */}
-   
-    </Router>
+          {/* Redirection par défaut vers /admin */}
+          <Route path="*" element={<Navigate to="/admin" replace />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
 
